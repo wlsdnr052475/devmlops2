@@ -1,1 +1,1 @@
-﻿team: DevOps팀
+team: DevOps팀 , MLOps팀
