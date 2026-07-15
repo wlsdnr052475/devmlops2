@@ -1,0 +1,11 @@
+pyproject.toml
+src/devmlops_ci/__init__.py
+src/devmlops_ci/calculator.py
+src/devmlops_ci/main.py
+src/devmlops_ci.egg-info/PKG-INFO
+src/devmlops_ci.egg-info/SOURCES.txt
+src/devmlops_ci.egg-info/dependency_links.txt
+src/devmlops_ci.egg-info/requires.txt
+src/devmlops_ci.egg-info/top_level.txt
+tests/test_calculator.py
+tests/test_main.py
