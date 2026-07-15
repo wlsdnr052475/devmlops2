@@ -1,1 +1,1 @@
-﻿team: Platform 팀
+﻿team: DevOps팀
