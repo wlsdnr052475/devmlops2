@@ -4,7 +4,7 @@
   "requiresCompatibilities": ["FARGATE"],
   "cpu": "256",
   "memory": "512",
-  "executionRoleArn": "<ECS_TASK_EXECUTION_ROLE_ARN>",
+  "executionRoleArn": "arn:aws:iam::409823419517:role/ecsTaskExecutionRole",
   "containerDefinitions": [
     {
       "name": "devmlops-fastapi",
