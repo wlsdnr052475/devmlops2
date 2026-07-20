@@ -30,7 +30,7 @@
         "logDriver": "awslogs",
         "options": {
           "awslogs-group": "/ecs/devmlops-fastapi",
-          "awslogs-region": "<AWS_REGION>",
+          "awslogs-region": "ap-northeast-2",
           "awslogs-stream-prefix": "ecs"
         }
       }
