@@ -1,0 +1,11 @@
+pyproject.toml
+src/devmlops_ml/__init__.py
+src/devmlops_ml/main.py
+src/devmlops_ml/train.py
+src/devmlops_ml.egg-info/PKG-INFO
+src/devmlops_ml.egg-info/SOURCES.txt
+src/devmlops_ml.egg-info/dependency_links.txt
+src/devmlops_ml.egg-info/requires.txt
+src/devmlops_ml.egg-info/top_level.txt
+tests/test_api.py
+tests/test_model_quality.py
