@@ -1,4 +1,4 @@
-﻿name: ml-deploy
+name: ml-deploy
 
 # champion 별칭 조회는 로컬 MLflow DB(ch03-1/mlflow.db) 기준으로만 가능하다.
 # GitHub Actions runner는 매 실행마다 새로 생성되어 이 로컬 상태를 갖고 있지
@@ -14,6 +14,10 @@ on:
       champion_run_id:
         description: "로컬에서 resolve_champion.py로 확인한 champion run_id"
         required: true
+
+concurrency:
+  group: ml-deploy-production
+  cancel-in-progress: true
 
 permissions:
   id-token: write
@@ -94,6 +98,8 @@ jobs:
           service: ${{ secrets.ECS_SERVICE }}
           cluster: ${{ secrets.ECS_CLUSTER }}
           wait-for-service-stability: true
+          wait-max-delay-seconds: 15
+          max-retries: 0
 
       # 이번 배포가 어떤 모델 버전을 기준으로 승인됐는지 로그에 남긴다.
       - name: Record deployed model version
