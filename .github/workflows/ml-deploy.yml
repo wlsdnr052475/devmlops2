@@ -70,7 +70,7 @@ jobs:
         run: |
           IMAGE_TAG=$(aws ecr describe-images \
             --repository-name "$REPOSITORY" \
-            --query "sort_by(imageDetails[?starts_with(imageTags[0], 'ml-')],& imagePushedAt)[-1].imageTags[0]" \
+            --query "sort_by(imageDetails[?imageTags != null && length(imageTags) > \`0\` && starts_with(imageTags[0], 'ml-')],&imagePushedAt)[-1].imageTags[0]" \
             --output text)
           if [ -z "$IMAGE_TAG" ] || [ "$IMAGE_TAG" = "None" ]; then
             echo "ml- 태그가 붙은 이미지를 찾을 수 없습니다. ch03-1 ml-cicd Workflow가 먼저 실행되어야 합니다." >&2
